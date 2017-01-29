@@ -1,0 +1,30 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xml:lang="ja" lang="ja">
+<head>
+</head>
+<body>
+<input type="button" value="send" id="send" name="send">
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#send').on('click', function () {
+            $.ajax({
+                type: 'post',
+                url: '/log',
+                data: JSON.stringify(
+                        {
+                            "hoge": "hoge",
+                            "fuga": 123,
+                            "flag": 1
+                        }
+                ),
+                dataType: 'json',
+                contentType: 'application/JSON',
+                scriptCharset: 'utf-8'
+            }).done(function (data) {
+                console.log(data);
+            });
+        })
+    });
+</script>
+</body>
+</html>
