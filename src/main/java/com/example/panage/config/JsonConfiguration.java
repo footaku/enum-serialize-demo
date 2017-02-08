@@ -18,7 +18,7 @@ public class JsonConfiguration {
      * @return {@link ObjectMapper}
      */
     @Bean
-    public ObjectMapper jsonObjectMapper(MessageSource messageSource) {
+    public ObjectMapper jsonObjectMapper() {
         ObjectMapper mapper = new ObjectMapper();
         mapper.registerModule(generateFlagModule());
         return mapper;

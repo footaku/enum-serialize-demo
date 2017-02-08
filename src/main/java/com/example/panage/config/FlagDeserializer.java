@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * @author panage
  */
-public class FlagDeserializer extends JsonDeserializer<Flag> {
+class FlagDeserializer extends JsonDeserializer<Flag> {
 
     @Override
     public Flag deserialize(JsonParser jsonParser, DeserializationContext deserializationContext)

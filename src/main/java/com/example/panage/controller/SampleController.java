@@ -22,7 +22,7 @@ public class SampleController {
     public String log(@RequestBody Sample sample) {
         System.out.println("hoge = " + sample.getHoge());
         System.out.println("fuga = " + sample.getFuga());
-        System.out.println("flag = " + sample.getFlag().getValue());
+        System.out.println("flag = " + sample.getFlag());
 
         return "redirect:sample";
     }
